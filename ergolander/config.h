@@ -36,68 +36,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define MATRIX_EXPANDER_COL_PINS { 5, 4, 3, 2, 1, 0 }
 #define MATRIX_EXPANDER_ROW_PINS { 0, 1, 2, 3, 4, 5, 6 }
 
-#define MOUSEKEY_INTERVAL           20
-#define MOUSEKEY_DELAY              0
-#define MOUSEKEY_TIME_TO_MAX        60
-#define MOUSEKEY_MAX_SPEED          7
-#define MOUSEKEY_WHEEL_DELAY        400
-#define MOUSEKEY_WHEEL_INTERVAL     MOUSEKEY_INTERVAL
-#define MOUSEKEY_WHEEL_MAX_SPEED    MOUSEKEY_MAX_SPEED
-#define MOUSEKEY_WHEEL_TIME_TO_MAX  MOUSEKEY_TIME_TO_MAX
-
-#define DEBOUNCE 30
-
-#define TAPPING_TOGGLE  1
-
-/* define if matrix has ghost */
-//#define MATRIX_HAS_GHOST
-
-#define TAPPING_TERM    200
-#define IGNORE_MOD_TAP_INTERRUPT // this makes it possible to do rolling combos (zx) with keys that convert to other keys on hold (z becomes ctrl when you hold it, and when this option isn't enabled, z rapidly followed by x actually sends Ctrl-x. That's bad.)
-
-/* Mechanical locking support. Use KC_LCAP, KC_LNUM or KC_LSCR instead in keymap */
-#define LOCKING_SUPPORT_ENABLE
-/* Locking resynchronize hack */
-#define LOCKING_RESYNC_ENABLE
-
-/* key combination for command */
-#define IS_COMMAND() ( \
-    get_mods() == (MOD_BIT(KC_LCTL) | MOD_BIT(KC_RCTL)) || \
-    get_mods() == (MOD_BIT(KC_LSFT) | MOD_BIT(KC_RSFT)) \
-)
-
-/* number of backlight levels */
-#define BACKLIGHT_LEVELS 3
-
-#ifndef LED_BRIGHTNESS_LO
-#define LED_BRIGHTNESS_LO       15
-#endif
-#ifndef LED_BRIGHTNESS_HI
-#define LED_BRIGHTNESS_HI       255
-#endif
-#define LED_BRIGHTNESS_DEFAULT (LED_BRIGHTNESS_HI)
-
-/* ws2812 RGB LED */
-#define RGB_DI_PIN D7
-#define RGBLIGHT_ANIMATIONS
-#define RGBLIGHT_HUE_STEP 12
-#define RGBLIGHT_SAT_STEP 255
-#define RGBLIGHT_VAL_STEP 12
-
-// Pick one of the modes
-// Defaults to 15 mirror, for legacy behavior
-
-// #define ERGODOX_LED_15 // Addresses 15 LEDs, but same position on both halves
-// #define ERGODOX_LED_15_MIRROR // Addresses 15 LEDs, but are mirrored
-// #define ERGODOX_LED_30 // Addresses all 30 LED individually
-
-/* fix space cadet rollover issue */
-#define DISABLE_SPACE_CADET_ROLLOVER
-
-#define RGBW
-
-#define RGBLIGHT_SLEEP
-
 /*
  * The debounce filtering reports a key/switch change directly,
  * without any extra delay. After that the debounce logic will filter
