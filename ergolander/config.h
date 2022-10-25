@@ -27,30 +27,24 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define MATRIX_ROWS_PER_SIDE (MATRIX_ROWS / 2)
 #define MATRIX_COLS 6
 
-#define COL_EXPANDED { true, true, true, true, true, true, true, false, false, false, false, false, false, false }
-#define MATRIX_ONBOARD_ROW_PINS { 0, 0, 0, 0, 0, 0, 0, B0,  B1,  B2,  B3,  D2,  D3,  C6 }
-#define MATRIX_ONBOARD_COL_PINS { F0,  F1,  F4,  F5,  F6,  F7 }
-#define DIODE_DIRECTION COL2ROW
-#define EXPANDER_COL_REGISTER GPIOB
-#define EXPANDER_ROW_REGISTER GPIOA
-#define MATRIX_EXPANDER_COL_PINS { 5, 4, 3, 2, 1, 0 }
-#define MATRIX_EXPANDER_ROW_PINS { 0, 1, 2, 3, 4, 5, 6 }
-
 /*
- * The debounce filtering reports a key/switch change directly,
- * without any extra delay. After that the debounce logic will filter
- * all further changes, until the key/switch reports the same state for
- * the given count of scans.
- * So a perfect switch will get a short debounce period and
- * a bad key will get a much longer debounce period.
- * The result is an adaptive debouncing period for each switch.
+ * Keyboard Matrix Assignments
  *
- * If you don't define it here, the matrix code will default to
- * 5, which is now closer to 10ms, but still plenty according to
- * manufacturer specs.
+ * Change this to how you wired your keyboard
+ * COLS: AVR pins used for columns, left to right
+ * ROWS: AVR pins used for rows, top to bottom
+ * DIODE_DIRECTION: COL2ROW = COL = Anode (+), ROW = Cathode (-, marked on diode)
+ *                  ROW2COL = ROW = Anode (+), COL = Cathode (-, marked on diode)
+ *
  */
 
-/* optical sensor details [not needed yet]
+#define MATRIX_ONBOARD_ROW_PINS { B0,  B1,  B2,  B3,  D2,  D3,  C6 }
+#define MATRIX_ONBOARD_COL_PINS { F0,  F1,  F4,  F5,  F6,  F7 }
+#define DIODE_DIRECTION COL2ROW
+
+
+/*----------------------------
+/* optical sensor details [not needed yet, to  be added later]
 /* optical sensor settings */
 /*#define SCROLL_DIVIDER 12
 /*#define CPI_1 2000
