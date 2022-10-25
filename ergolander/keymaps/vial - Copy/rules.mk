@@ -60,5 +60,9 @@ COMBO_ENABLE = yes
 # Disabling it frees 3300 bytes
 QMK_SETTINGS = yes
 
+#Oled settings
+OLED_ENABLE = yes
+OLED_DRIVER = SSD1306
+
 #vial security
 VIAL_INSECURE = no
