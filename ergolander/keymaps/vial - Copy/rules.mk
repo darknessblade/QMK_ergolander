@@ -61,7 +61,7 @@ COMBO_ENABLE = yes
 QMK_SETTINGS = yes
 
 #Oled settings
-OLED_ENABLE = yes
+OLED_ENABLE = no
 OLED_DRIVER = SSD1306
 
 #vial security
