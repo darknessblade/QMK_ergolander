@@ -50,5 +50,18 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * manufacturer specs.
  */
 
+/* optical sensor details [not needed yet]
+/* optical sensor settings */
+/*#define SCROLL_DIVIDER 12
+/*#define CPI_1 2000
+/*#define CPI_2 4000
+/*#define CPI_3 8000
+
+/* Bootmagic Lite key configuration */
+// #define BOOTMAGIC_LITE_ROW 0
+// #define BOOTMAGIC_LITE_COLUMN 0
+
+/*#define ADNS9800_CS_PIN SPI_SS_PIN
+/*#define PMW33XX_CS_PIN SPI_SS_PIN
 
 
