@@ -6,7 +6,7 @@ Copyright 2020 Christopher Courtney <drashna@live.com> (@drashna)
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 2 of the License, or
+the Free Software Foundation, either version 2 of the License, org/licenses/
 (at your option) any later version.
 
 This program is distributed in the hope that it will be useful,
@@ -37,7 +37,7 @@ extern keyboard_config_t keyboard_config;
     k40,k41,k42,k43,k44,                                        \
                             k55,k56,                            \
                             k54,k53,                            \
-			    k52,k51,                            \
+							k52,k51,                            \
                                                                 \
         k07,k08,k09,k0A,k0B,k0C,k0D,                            \
         k17,k18,k19,k1A,k1B,k1C,k1D,                            \

@@ -1,7 +1,10 @@
+#board info
+BOARD = GENERIC_RP_RP2040
 # MCU name
 MCU = RP2040
 
 # Bootloader selection
+BOOTLOADER = W25Q080
 
 #enable via/vial
 VIA_ENABLE = yes

@@ -1,3 +1,5 @@
+#board info
+BOARD = GENERIC_RP_RP2040
 # MCU name
 MCU = RP2040
 
@@ -24,7 +26,7 @@ LTO_ENABLE = yes
 # hold shift will output tilde ~
 # hold win/command key will output backtick `
 # Disabling it frees 140 b
-GRAVE_ESC_ENABLE = no8
+GRAVE_ESC_ENABLE = yes
 
 # N-key rollover
 # capable of reporting any number of key-presses at once rather than 6 keys by default
@@ -86,6 +88,7 @@ SWAP_HANDS_ENABLE= no   # Allow swapping hands of keyboard
 #vial security
 VIAL_INSECURE = no
 #split keyboard
+#needed for connecting 2 halves
 SPLIT_KEYBOARD = yes
 #mini trackball
 POINTING_DEVICE_ENABLE = no
