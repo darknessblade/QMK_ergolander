@@ -22,12 +22,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include "config_common.h"
 
+/*----------------------------
 /* key matrix size */
 #define MATRIX_ROWS 14
 #define MATRIX_ROWS_PER_SIDE (MATRIX_ROWS / 2)
 #define MATRIX_COLS 6
 
-/*
+/*----------------------------
  * Keyboard Matrix Assignments
  *
  * Change this to how you wired your keyboard
@@ -38,10 +39,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
  */
 
-#define MATRIX_ONBOARD_ROW_PINS { B0,  B1,  B2,  B3,  D2,  D3,  C6 }
-#define MATRIX_ONBOARD_COL_PINS { F0,  F1,  F4,  F5,  F6,  F7 }
+#define MATRIX_ONBOARD_ROW_PINS { GP0,  GP1,  GP2,  GP3,  GP4,  GP5,  GP6 }
+#define MATRIX_ONBOARD_COL_PINS { GP9,  GP10, GP11, GP12,  GP13,  GP14 }
 #define DIODE_DIRECTION COL2ROW
 
+/*rp2040 settings*/
+#define RP2040_FLASH_W25Q080
 
 /*----------------------------
 /* optical sensor details [not needed yet, to  be added later]
@@ -50,12 +53,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 /*#define CPI_1 2000
 /*#define CPI_2 4000
 /*#define CPI_3 8000
+*/
 
-/* Bootmagic Lite key configuration */
-// #define BOOTMAGIC_LITE_ROW 0
-// #define BOOTMAGIC_LITE_COLUMN 0
+/* Bootmagic Lite key configuration 
+/* #define BOOTMAGIC_LITE_ROW 0
+/* #define BOOTMAGIC_LITE_COLUMN 0*/
 
 /*#define ADNS9800_CS_PIN SPI_SS_PIN
 /*#define PMW33XX_CS_PIN SPI_SS_PIN
 
 
+*/
