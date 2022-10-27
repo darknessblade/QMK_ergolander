@@ -1,0 +1,176 @@
+Compiling: platforms/chibios/drivers/serial.c                                                      In file included from ./lib/chibios/os/hal/include/hal_pal.h:174,
+                 from ./lib/chibios/os/hal/include/hal.h:299,
+                 from platforms/chibios/platform_deps.h:18,
+                 from quantum/quantum.h:18,
+                 from platforms/chibios/drivers/serial.c:5:
+platforms/chibios/drivers/serial.c: In function 'serial_output':
+platforms/chibios/drivers/serial.c:65:18: error: 'SOFT_SERIAL_PIN' undeclared (first use in this function)
+   65 |     setPinOutput(SOFT_SERIAL_PIN);
+      |                  ^~~~~~~~~~~~~~~
+./lib/chibios/os/hal/ports/RP/LLD/GPIOv1/hal_pal_lld.h:381:32: note: in definition of macro 'pal_lld_setpadmode'
+  381 |   __pal_lld_pad_set_mode(port, pad, mode)
+      |                                ^~~
+./lib/chibios/os/hal/include/hal_pal.h:790:3: note: in expansion of macro 'palSetPadMode'
+  790 |   palSetPadMode(PAL_PORT(line), PAL_PAD(line), mode)
+      |   ^~~~~~~~~~~~~
+./lib/chibios/os/hal/include/hal_pal.h:790:33: note: in expansion of macro 'PAL_PAD'
+  790 |   palSetPadMode(PAL_PORT(line), PAL_PAD(line), mode)
+      |                                 ^~~~~~~
+platforms/chibios/gpio.h:28:35: note: in expansion of macro 'palSetLineMode'
+   28 | #define setPinOutputPushPull(pin) palSetLineMode((pin), PAL_MODE_OUTPUT_PUSHPULL)
+      |                                   ^~~~~~~~~~~~~~
+platforms/chibios/gpio.h:30:27: note: in expansion of macro 'setPinOutputPushPull'
+   30 | #define setPinOutput(pin) setPinOutputPushPull(pin)
+      |                           ^~~~~~~~~~~~~~~~~~~~
+platforms/chibios/drivers/serial.c:65:5: note: in expansion of macro 'setPinOutput'
+   65 |     setPinOutput(SOFT_SERIAL_PIN);
+      |     ^~~~~~~~~~~~
+platforms/chibios/drivers/serial.c:65:18: note: each undeclared identifier is reported only once for each function it appears in
+   65 |     setPinOutput(SOFT_SERIAL_PIN);
+      |                  ^~~~~~~~~~~~~~~
+./lib/chibios/os/hal/ports/RP/LLD/GPIOv1/hal_pal_lld.h:381:32: note: in definition of macro 'pal_lld_setpadmode'
+  381 |   __pal_lld_pad_set_mode(port, pad, mode)
+      |                                ^~~
+./lib/chibios/os/hal/include/hal_pal.h:790:3: note: in expansion of macro 'palSetPadMode'
+  790 |   palSetPadMode(PAL_PORT(line), PAL_PAD(line), mode)
+      |   ^~~~~~~~~~~~~
+./lib/chibios/os/hal/include/hal_pal.h:790:33: note: in expansion of macro 'PAL_PAD'
+  790 |   palSetPadMode(PAL_PORT(line), PAL_PAD(line), mode)
+      |                                 ^~~~~~~
+platforms/chibios/gpio.h:28:35: note: in expansion of macro 'palSetLineMode'
+   28 | #define setPinOutputPushPull(pin) palSetLineMode((pin), PAL_MODE_OUTPUT_PUSHPULL)
+      |                                   ^~~~~~~~~~~~~~
+platforms/chibios/gpio.h:30:27: note: in expansion of macro 'setPinOutputPushPull'
+   30 | #define setPinOutput(pin) setPinOutputPushPull(pin)
+      |                           ^~~~~~~~~~~~~~~~~~~~
+platforms/chibios/drivers/serial.c:65:5: note: in expansion of macro 'setPinOutput'
+   65 |     setPinOutput(SOFT_SERIAL_PIN);
+      |     ^~~~~~~~~~~~
+platforms/chibios/drivers/serial.c: In function 'serial_input':
+platforms/chibios/drivers/serial.c:68:21: error: 'SOFT_SERIAL_PIN' undeclared (first use in this function)
+   68 |     setPinInputHigh(SOFT_SERIAL_PIN);
+      |                     ^~~~~~~~~~~~~~~
+./lib/chibios/os/hal/ports/RP/LLD/GPIOv1/hal_pal_lld.h:381:32: note: in definition of macro 'pal_lld_setpadmode'
+  381 |   __pal_lld_pad_set_mode(port, pad, mode)
+      |                                ^~~
+./lib/chibios/os/hal/include/hal_pal.h:790:3: note: in expansion of macro 'palSetPadMode'
+  790 |   palSetPadMode(PAL_PORT(line), PAL_PAD(line), mode)
+      |   ^~~~~~~~~~~~~
+./lib/chibios/os/hal/include/hal_pal.h:790:33: note: in expansion of macro 'PAL_PAD'
+  790 |   palSetPadMode(PAL_PORT(line), PAL_PAD(line), mode)
+      |                                 ^~~~~~~
+platforms/chibios/gpio.h:26:30: note: in expansion of macro 'palSetLineMode'
+   26 | #define setPinInputHigh(pin) palSetLineMode((pin), PAL_MODE_INPUT_PULLUP)
+      |                              ^~~~~~~~~~~~~~
+platforms/chibios/drivers/serial.c:68:5: note: in expansion of macro 'setPinInputHigh'
+   68 |     setPinInputHigh(SOFT_SERIAL_PIN);
+      |     ^~~~~~~~~~~~~~~
+In file included from ./lib/chibios/os/hal/include/hal.h:299,
+                 from platforms/chibios/platform_deps.h:18,
+                 from quantum/quantum.h:18,
+                 from platforms/chibios/drivers/serial.c:5:
+platforms/chibios/drivers/serial.c: In function 'serial_read_pin':
+platforms/chibios/drivers/serial.c:71:22: error: 'SOFT_SERIAL_PIN' undeclared (first use in this function)
+   71 |     return !!readPin(SOFT_SERIAL_PIN);
+      |                      ^~~~~~~~~~~~~~~
+./lib/chibios/os/hal/include/hal_pal.h:576:55: note: in definition of macro 'palReadPad'
+  576 | #define palReadPad(port, pad) ((palReadPort(port) >> (pad)) & 1U)
+      |                                                       ^~~
+./lib/chibios/os/hal/include/hal_pal.h:696:54: note: in expansion of macro 'PAL_PAD'
+  696 | #define palReadLine(line) palReadPad(PAL_PORT(line), PAL_PAD(line))
+      |                                                      ^~~~~~~
+platforms/chibios/gpio.h:43:22: note: in expansion of macro 'palReadLine'
+   43 | #define readPin(pin) palReadLine(pin)
+      |                      ^~~~~~~~~~~
+platforms/chibios/drivers/serial.c:71:14: note: in expansion of macro 'readPin'
+   71 |     return !!readPin(SOFT_SERIAL_PIN);
+      |              ^~~~~~~
+In file included from ./lib/chibios/os/hal/include/hal_pal.h:174,
+                 from ./lib/chibios/os/hal/include/hal.h:299,
+                 from platforms/chibios/platform_deps.h:18,
+                 from quantum/quantum.h:18,
+                 from platforms/chibios/drivers/serial.c:5:
+platforms/chibios/drivers/serial.c: In function 'serial_low':
+platforms/chibios/drivers/serial.c:74:17: error: 'SOFT_SERIAL_PIN' undeclared (first use in this function)
+   74 |     writePinLow(SOFT_SERIAL_PIN);
+      |                 ^~~~~~~~~~~~~~~
+./lib/chibios/os/hal/ports/RP/LLD/GPIOv1/hal_pal_lld.h:344:26: note: in definition of macro 'pal_lld_clearport'
+  344 |     SIO->GPIO_OUT_CLR = (bits);                                             \
+      |                          ^~~~
+./lib/chibios/os/hal/include/hal_pal.h:637:32: note: in expansion of macro 'palClearPort'
+  637 | #define palClearPad(port, pad) palClearPort(port, PAL_PORT_BIT(pad))
+      |                                ^~~~~~~~~~~~
+./lib/chibios/os/hal/include/hal_pal.h:637:51: note: in expansion of macro 'PAL_PORT_BIT'
+  637 | #define palClearPad(port, pad) palClearPort(port, PAL_PORT_BIT(pad))
+      |                                                   ^~~~~~~~~~~~
+./lib/chibios/os/hal/include/hal_pal.h:752:28: note: in expansion of macro 'palClearPad'
+  752 | #define palClearLine(line) palClearPad(PAL_PORT(line), PAL_PAD(line))
+      |                            ^~~~~~~~~~~
+./lib/chibios/os/hal/include/hal_pal.h:752:56: note: in expansion of macro 'PAL_PAD'
+  752 | #define palClearLine(line) palClearPad(PAL_PORT(line), PAL_PAD(line))
+      |                                                        ^~~~~~~
+platforms/chibios/gpio.h:33:26: note: in expansion of macro 'palClearLine'
+   33 | #define writePinLow(pin) palClearLine(pin)
+      |                          ^~~~~~~~~~~~
+platforms/chibios/drivers/serial.c:74:5: note: in expansion of macro 'writePinLow'
+   74 |     writePinLow(SOFT_SERIAL_PIN);
+      |     ^~~~~~~~~~~
+platforms/chibios/drivers/serial.c: In function 'serial_high':
+platforms/chibios/drivers/serial.c:77:18: error: 'SOFT_SERIAL_PIN' undeclared (first use in this function)
+   77 |     writePinHigh(SOFT_SERIAL_PIN);
+      |                  ^~~~~~~~~~~~~~~
+./lib/chibios/os/hal/ports/RP/LLD/GPIOv1/hal_pal_lld.h:327:26: note: in definition of macro 'pal_lld_setport'
+  327 |     SIO->GPIO_OUT_SET = (bits);                                             \
+      |                          ^~~~
+./lib/chibios/os/hal/include/hal_pal.h:618:30: note: in expansion of macro 'palSetPort'
+  618 | #define palSetPad(port, pad) palSetPort(port, PAL_PORT_BIT(pad))
+      |                              ^~~~~~~~~~
+./lib/chibios/os/hal/include/hal_pal.h:618:47: note: in expansion of macro 'PAL_PORT_BIT'
+  618 | #define palSetPad(port, pad) palSetPort(port, PAL_PORT_BIT(pad))
+      |                                               ^~~~~~~~~~~~
+./lib/chibios/os/hal/include/hal_pal.h:734:26: note: in expansion of macro 'palSetPad'
+  734 | #define palSetLine(line) palSetPad(PAL_PORT(line), PAL_PAD(line))
+      |                          ^~~~~~~~~
+./lib/chibios/os/hal/include/hal_pal.h:734:52: note: in expansion of macro 'PAL_PAD'
+  734 | #define palSetLine(line) palSetPad(PAL_PORT(line), PAL_PAD(line))
+      |                                                    ^~~~~~~
+platforms/chibios/gpio.h:32:27: note: in expansion of macro 'palSetLine'
+   32 | #define writePinHigh(pin) palSetLine(pin)
+      |                           ^~~~~~~~~~
+platforms/chibios/drivers/serial.c:77:5: note: in expansion of macro 'writePinHigh'
+   77 |     writePinHigh(SOFT_SERIAL_PIN);
+      |     ^~~~~~~~~~~~
+platforms/chibios/drivers/serial.c: In function 'Thread1':
+platforms/chibios/drivers/serial.c:90:9: error: implicit declaration of function 'palWaitLineTimeout' [-Werror=implicit-function-declaration]
+   90 |         palWaitLineTimeout(SOFT_SERIAL_PIN, TIME_INFINITE);
+      |         ^~~~~~~~~~~~~~~~~~
+platforms/chibios/drivers/serial.c:90:28: error: 'SOFT_SERIAL_PIN' undeclared (first use in this function)
+   90 |         palWaitLineTimeout(SOFT_SERIAL_PIN, TIME_INFINITE);
+      |                            ^~~~~~~~~~~~~~~
+platforms/chibios/drivers/serial.c: In function 'soft_serial_target_init':
+platforms/chibios/drivers/serial.c:103:5: error: implicit declaration of function 'palEnablePadEvent' [-Werror=implicit-function-declaration]
+  103 |     palEnablePadEvent(PAL_PORT(SOFT_SERIAL_PIN), PAL_PAD(SOFT_SERIAL_PIN), PAL_EVENT_MODE_FALLING_EDGE);
+      |     ^~~~~~~~~~~~~~~~~
+In file included from ./lib/chibios/os/hal/include/hal_pal.h:174,
+                 from ./lib/chibios/os/hal/include/hal.h:299,
+                 from platforms/chibios/platform_deps.h:18,
+                 from quantum/quantum.h:18,
+                 from platforms/chibios/drivers/serial.c:5:
+platforms/chibios/drivers/serial.c:103:58: error: 'SOFT_SERIAL_PIN' undeclared (first use in this function)
+  103 |     palEnablePadEvent(PAL_PORT(SOFT_SERIAL_PIN), PAL_PAD(SOFT_SERIAL_PIN), PAL_EVENT_MODE_FALLING_EDGE);
+      |                                                          ^~~~~~~~~~~~~~~
+./lib/chibios/os/hal/ports/RP/LLD/GPIOv1/hal_pal_lld.h:213:42: note: in definition of macro 'PAL_PAD'
+  213 | #define PAL_PAD(line)                   (line)
+      |                                          ^~~~
+platforms/chibios/drivers/serial.c: In function 'serial_read_pin':
+platforms/chibios/drivers/serial.c:72:1: error: control reaches end of non-void function [-Werror=return-type]
+   72 | }
+      | ^
+cc1.exe: all warnings being treated as errors
+ [ERRORS]
+ |
+ |
+ |
+make[1]: *** [builddefs/common_rules.mk:359: .build/obj_ergolander_default/serial.o] Error 1
+Make finished with errors
+make: *** [Makefile:414: ergolander:default] Error 1
