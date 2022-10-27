@@ -2,7 +2,10 @@
 
 ![ergolander](imgur.com image replace me!)
 
-*A short description of the keyboard/project*
+This is revision 4 of my ergolander keyboard.
+
+Example picture of the rough look/top grid
+![ergolander layout](https://user-images.githubusercontent.com/16239104/198272841-b5404e6f-358d-4adf-8f9c-83d001a04143.png)
 
 * Keyboard Maintainer: [darknessblade](https://github.com/darknessblade)
 * Hardware Supported: *The PCBs, controllers supported*
